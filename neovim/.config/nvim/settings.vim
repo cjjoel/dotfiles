@@ -9,6 +9,8 @@ set smartindent
 set autoindent
 set mouse=a
 set clipboard=unnamedplus
+" Remember last cursor position in file
+autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " coc
 set nobackup
