@@ -1,3 +1,4 @@
+let g:mapleader = "\<Space>"
 nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
 
