@@ -3,12 +3,12 @@
 {
   imports = [
     ./common.nix
-    #../configs/sxhkd.nix
   ];
+
   home.packages = with pkgs; [ 
     firefox
     dmenu
-    #sxhkd
+    font-awesome_4
   ];
 
   services.picom.enable = true;
@@ -26,7 +26,8 @@
   };
 
   xdg.configFile."bspwm/bspwmrc".source = ../bin/bspwmrc;
-  
+
+  fonts.fontconfig.enable = true;
   home.username = "joel";
   home.homeDirectory = "/home/joel";
 }
