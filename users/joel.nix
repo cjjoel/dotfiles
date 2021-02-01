@@ -26,6 +26,8 @@
     dmenu
   ]; 
 
+  programs.bash = import ../configs/bash.nix {};
+
   programs.git = import ../configs/git.nix {};
   
   programs.kitty = import ../configs/kitty.nix {};
