@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     # Development
     clang
+    python3 # for emacs
     
     # Social
 
