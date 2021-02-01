@@ -23,6 +23,7 @@
     obsidian
     firefox
     dmenu
+    sxhkd
   ]; 
 
   programs.git = import ../configs/git.nix {};
