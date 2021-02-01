@@ -23,7 +23,6 @@
     obsidian
     firefox
     dmenu
-    sxhkd
   ]; 
 
   programs.git = import ../configs/git.nix {};
@@ -36,8 +35,7 @@
   home.file.".emacs.d" = { source = ../bin/emacs.d; recursive = true;};
 
   xdg.configFile."bspwm/bspwmrc".source = ../bin/bspwmrc;
-  xdg.configFile."sxhkd/sxhkdrc".source = ../bin/sxhkdrc;
-  #services.sxhkd = import ../configs/sxhkd.nix { inherit pkgs; };
+  services.sxhkd = import ../configs/sxhkd.nix { inherit pkgs; };
   services.picom.enable = true;
   services.polybar = import ../configs/polybar.nix { inherit pkgs; };
 
