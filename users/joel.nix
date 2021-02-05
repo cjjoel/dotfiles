@@ -11,6 +11,7 @@
     python3 # for emacs
     
     # Social
+    tdesktop
 
     # Fonts
     font-awesome_4
@@ -26,7 +27,7 @@
     dmenu
   ]; 
 
-  programs.bash = import ../configs/bash.nix {};
+  programs.bash = import ../configs/bash.nix { inherit pkgs; };
 
   programs.git = import ../configs/git.nix {};
   
