@@ -24,6 +24,7 @@
     mpv
     obsidian
     firefox
+    libreoffice
   ]; 
 
   programs.bash = import ../configs/bash.nix { inherit pkgs; };
