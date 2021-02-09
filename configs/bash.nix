@@ -22,4 +22,9 @@
     export PS1=$(git_prompt)
     PROMPT_COMMAND='export PS1=$(git_prompt)'
   '';
+
+  # Must export $PATH for rofi/dmenu
+  profileExtra = ''
+    export PATH="''$PATH:/run/current-system/sw/bin"
+  '';
 }
