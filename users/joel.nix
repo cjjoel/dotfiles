@@ -24,6 +24,7 @@
     mpv
     obsidian
     firefox
+    chromium
     libreoffice
   ]; 
 
