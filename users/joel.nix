@@ -21,6 +21,7 @@
     tree
 
     # Others
+    pcmanfm
     mpv
     obsidian
     firefox
