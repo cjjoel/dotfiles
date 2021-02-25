@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -44,7 +44,7 @@
   services.sxhkd = import ../configs/sxhkd.nix { inherit pkgs; };
   services.picom.enable = true;
   services.polybar = import ../configs/polybar.nix { inherit pkgs; };
-  programs.rofi.enable = true;
+  programs.rofi = import ../configs/rofi.nix {};
 
   fonts.fontconfig.enable = true;
   home.username = "joel";
