@@ -19,6 +19,7 @@
     # CLI tools
     fd
     tree
+    wget
 
     # Others
     pcmanfm
@@ -34,6 +35,7 @@
   programs.git = import ../configs/git.nix {};
   
   programs.kitty = import ../configs/kitty.nix {};
+  xdg.configFile."kitty/theme.conf".source = ../bin/gruvbox_light.conf;
   
   programs.neovim = import ../configs/neovim.nix { inherit pkgs; };
 
