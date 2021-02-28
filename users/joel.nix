@@ -40,7 +40,7 @@
   programs.neovim = import ../configs/neovim.nix { inherit pkgs; };
 
   programs.emacs = import ../configs/emacs.nix { inherit pkgs; };
-  home.file.".emacs.d" = { source = ../bin/emacs.d; recursive = true;};
+  #home.file.".emacs.d" = { source =  ../bin/emacs.d; recursive = true;};
 
   xdg.configFile."bspwm/bspwmrc".source = ../bin/bspwmrc;
   services.sxhkd = import ../configs/sxhkd.nix { inherit pkgs; };
