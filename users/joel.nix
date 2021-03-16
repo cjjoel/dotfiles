@@ -9,9 +9,12 @@
     # Development
     clang
     python3 # for emacs
+    ripgrep
+    shellcheck
     
     # Social
     tdesktop
+    discord
 
     # Fonts
     font-awesome_4
@@ -28,6 +31,7 @@
     firefox
     chromium
     libreoffice
+    anki
   ]; 
 
   programs.bash = import ../configs/bash.nix { inherit pkgs; };
@@ -35,12 +39,13 @@
   programs.git = import ../configs/git.nix {};
   
   programs.kitty = import ../configs/kitty.nix {};
-  xdg.configFile."kitty/theme.conf".source = ../bin/gruvbox_light.conf;
+  #xdg.configFile."kitty/theme.conf".source = ../bin/gruvbox_light.conf;
   
   programs.neovim = import ../configs/neovim.nix { inherit pkgs; };
 
-  programs.emacs = import ../configs/emacs.nix { inherit pkgs; };
+  #programs.emacs = import ../configs/emacs.nix { inherit pkgs; };
   #home.file.".emacs.d" = { source =  ../bin/emacs.d; recursive = true;};
+  #home.file.".doom.d" = { source = config.lib.file.mkOutOfStoreSymlink ../bin/doom.d; recursive = true;};
 
   xdg.configFile."bspwm/bspwmrc".source = ../bin/bspwmrc;
   services.sxhkd = import ../configs/sxhkd.nix { inherit pkgs; };
