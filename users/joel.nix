@@ -47,12 +47,6 @@
   #home.file.".emacs.d" = { source =  ../bin/emacs.d; recursive = true;};
   #home.file.".doom.d" = { source = config.lib.file.mkOutOfStoreSymlink ../bin/doom.d; recursive = true;};
 
-  xdg.configFile."bspwm/bspwmrc".source = ../bin/bspwmrc;
-  services.sxhkd = import ../configs/sxhkd.nix { inherit pkgs; };
-  services.picom.enable = true;
-  services.polybar = import ../configs/polybar.nix { inherit pkgs; };
-  programs.rofi = import ../configs/rofi.nix {};
-
   fonts.fontconfig.enable = true;
   home.username = "joel";
   home.homeDirectory = "/home/joel";
