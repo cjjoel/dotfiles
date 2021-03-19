@@ -1,0 +1,33 @@
+super + Return
+	kitty
+
+super + space
+	rofi -combi-modi drun,run -show combi -show-icons
+
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+super + {_,shift + }w
+	bspc node -{c,k}
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+super + {h,j,k,l}
+    bspc node -f {west,south,north,east}
+
+super + shift + l
+    betterlockscreen -l dimblur -t ''
+
+XF86AudioLowerVolume
+	pactl set-sink-volume 0 -5%
+XF86AudioRaiseVolume
+	pactl set-sink-volume 0 +5%
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
+
+XF86MonBrightnessDown
+    light -U 30
+XF86MonBrightnessUp
+    light -A 30
+
