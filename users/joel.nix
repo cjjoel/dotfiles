@@ -28,7 +28,6 @@
     pcmanfm
     mpv
     obsidian
-    firefox
     chromium
     libreoffice
     anki
@@ -46,6 +45,8 @@
   #programs.emacs = import ../configs/emacs.nix { inherit pkgs; };
   #home.file.".emacs.d" = { source =  ../bin/emacs.d; recursive = true;};
   #home.file.".doom.d" = { source = config.lib.file.mkOutOfStoreSymlink ../bin/doom.d; recursive = true;};
+
+  programs.firefox = import ../configs/firefox.nix { inherit pkgs; };
 
   fonts.fontconfig.enable = true;
   home.username = "joel";
