@@ -11,6 +11,7 @@
     python3 # for emacs
     ripgrep
     shellcheck
+    gnumake
     
     # Social
     tdesktop
@@ -28,7 +29,6 @@
     pcmanfm
     mpv
     obsidian
-    chromium
     libreoffice
     anki
   ]; 
@@ -47,6 +47,7 @@
   #home.file.".doom.d" = { source = config.lib.file.mkOutOfStoreSymlink ../bin/doom.d; recursive = true;};
 
   programs.firefox = import ../configs/firefox.nix { inherit pkgs; };
+  programs.chromium = import ../configs/chromium.nix {};
 
   fonts.fontconfig.enable = true;
   home.username = "joel";
