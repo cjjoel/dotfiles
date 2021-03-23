@@ -5,7 +5,7 @@
   profiles.default = {
     isDefault = true;
     settings = {
-      "browser.tabs.closeWindowWithLastTab" = false;
+      "browser.tabs.closeWindowWithLastTab" = true;
       "dom.battery.enabled" = false;
       "geo.enabled" = false;
       "media.navigator.enabled" = false;
@@ -55,7 +55,6 @@
   };
   extensions = with pkgs.nur.repos.rycee.firefox-addons; [
     ublock-origin
-    vimium
   ];
 }
 
