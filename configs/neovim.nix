@@ -17,5 +17,6 @@
     set nohlsearch
     set hidden
     set scrolloff=8
+    set clipboard^=unnamed,unnamedplus
   '';
 }
