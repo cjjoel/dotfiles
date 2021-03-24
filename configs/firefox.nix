@@ -20,7 +20,7 @@
       "services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.section.topstories" = false;
       "services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.topsites" = false;
       "services.sync.prefs.sync.browser.newtabpage.activity-stream.section.highlights.includeVisited" = false;
-      "network.cookie.lifetimePolicy" = 2;
+      "network.cookie.lifetimePolicy" = 0; # use server provided expiry date
       "network.predictor.enabled" = false;
       "network.http.referer.spoofSource" = true;
       
@@ -99,6 +99,8 @@
   };
   extensions = with pkgs.nur.repos.rycee.firefox-addons; [
     ublock-origin
+    cookie-autodelete
+    search-by-image
   ];
 }
 
