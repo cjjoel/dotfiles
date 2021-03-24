@@ -1,0 +1,3 @@
+#main-window :-moz-any(#home-button, #library-button, #sidebar-button) { 
+    display: none !important; 
+}

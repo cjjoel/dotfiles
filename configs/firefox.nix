@@ -13,6 +13,7 @@
       "privacy.donottrackheader.enabled" = true;
       "privacy.trackingprotection.enabled" = true;
       "browser.search.region" = "";
+      "browser.newtabpage.activity-stream.asrouter.providers.snippets" = "";
       "services.sync.prefs.sync.extensions.activeThemeID" = false;
       "services.sync.prefs.sync.browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
       "services.sync.prefs.sync.browser.newtabpage.activity-stream.showSponsored" = false;
@@ -20,6 +21,7 @@
       "services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.section.topstories" = false;
       "services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.topsites" = false;
       "services.sync.prefs.sync.browser.newtabpage.activity-stream.section.highlights.includeVisited" = false;
+      "services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.snippets" = false;
       "network.cookie.lifetimePolicy" = 0; # use server provided expiry date
       "network.predictor.enabled" = false;
       "network.http.referer.spoofSource" = true;
@@ -89,14 +91,18 @@
       "browser.newtabpage.activity-stream.discoverystream.enabled" = false;
       "browser.newtabpage.activity-stream.showSponsored" = false;
       "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+      "browser.newtabpage.activity-stream.feeds.snippets" = false;
       "browser.newtabpage.activity-stream.feeds.discoverystreamfeed" = false;
       "browser.newtabpage.activity-stream.feeds.system.topsites" = false;
       "browser.newtabpage.activity-stream.feeds.topsites" = false;
       "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
       "browser.newtabpage.activity-stream.feeds.system.topstories" = false;
       "browser.newtabpage.activity-stream.feeds.section.highlights" = false;
+      "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # for userChrome
     };
+    userChrome = builtins.readFile ../bin/userChrome.css;
   };
+      #main-window :-moz-any(#home-button) { display: none !important; }
   extensions = with pkgs.nur.repos.rycee.firefox-addons; [
     ublock-origin
     cookie-autodelete
