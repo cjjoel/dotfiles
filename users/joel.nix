@@ -57,4 +57,16 @@ let unstablePkgs = import <nixpkgs-unstable> { config = { allowUnfree = true; };
   fonts.fontconfig.enable = true;
   home.username = "joel";
   home.homeDirectory = "/home/joel";
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = [ "org.kde.okular.desktop" "firefox.desktop" ];
+      "text/html" = "firefox.desktop";
+      "x-scheme-handler/http" = "firefox.desktop";
+      "x-scheme-handler/https" = "firefox.desktop";
+      "x-scheme-handler/about" = "firefox.desktop";
+      "x-scheme-handler/unknown" = "firefox.desktop";
+    };
+  };
 }
