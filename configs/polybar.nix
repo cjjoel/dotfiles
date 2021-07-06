@@ -2,7 +2,14 @@
 
 {
   enable = true;
+  
+  package = pkgs.polybar.override {
+    pulseSupport = true;
+  };
+
+  script = "polybar top &";
   config = {
+
     "bar/top" = {
       background="\${colors.background}";
       foreground = "\${colors.foreground}";
@@ -75,13 +82,6 @@
       type="internal/date";
     };
 
-    "module/pulseaudio" = {
-      type = "internal/pulseaudio";
-      # sink = "alsa_output.pci-0000_12_00.3.analog-stereo";
-      use-ui-max = "true";
-      interval = 5;
-    };
-
     "colors" = {
       alert = "#bd2c40";
       background = "#222";
@@ -92,10 +92,5 @@
       secondary = "#e60053";
     };
   };
-  script = ''
-    #!${pkgs.bash}/bin/bash
-    systemctl --user daemon-reload
-    polybar top &
-  '';
 }
 
