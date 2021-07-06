@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 
-let unstablePkgs = import <nixpkgs-unstable> { config = { allowUnfree = true; }; }; in {
+#let unstablePkgs = import <nixpkgs-unstable> { config = { allowUnfree = true; }; }; in {
+{
   imports = [
     ./common.nix
   ];
@@ -28,15 +29,13 @@ let unstablePkgs = import <nixpkgs-unstable> { config = { allowUnfree = true; };
     # Others
     pcmanfm
     mpv
-    obsidian
     libreoffice
     anki
     vlc
     okular
     qtcurve
-  ] ++ (with unstablePkgs; [
-    logseq
-  ]);
+	logseq
+  ]; 
 
   programs.bash = import ../configs/bash.nix { inherit pkgs; };
 
