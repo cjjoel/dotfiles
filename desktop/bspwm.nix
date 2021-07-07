@@ -12,10 +12,12 @@
     betterlockscreen
     sxhkd
     feh
+    libnotify
   ]; 
 
   xdg.configFile."sxhkd/sxhkdrc".source = ../bin/sxhkdrc;
   services.picom.enable = true;
+  services.dunst = import ../configs/dunst.nix {};
   services.polybar = import ../configs/polybar.nix { inherit pkgs; };
   programs.rofi = import ../configs/rofi.nix {};
 }
