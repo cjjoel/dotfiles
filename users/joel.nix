@@ -17,6 +17,7 @@
     # Social
     tdesktop
     discord
+    element-desktop
 
     # Fonts
     font-awesome_4
@@ -25,6 +26,7 @@
     fd
     tree
     wget
+    unzip
 
     # Others
     pcmanfm
@@ -34,7 +36,8 @@
     vlc
     okular
     qtcurve
-	logseq
+    logseq
+    brave
   ]; 
 
   programs.bash = import ../configs/bash.nix { inherit pkgs; };
